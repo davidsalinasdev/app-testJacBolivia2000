@@ -1,0 +1,14 @@
+services:
+    postgres:
+        image: postgres:latest
+        ports:
+            - "3006:5432"
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=clave123
+            - POSTGRES_DB=testbd
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+volumes:
+    postgres_data:
+# docker compose up
